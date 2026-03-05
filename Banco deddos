@@ -1,0 +1,52 @@
+CREATE DATABASE stockmaster;
+
+USE stockmaster;
+
+CREATE TABLE empresa(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(200),
+plano VARCHAR(50),
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE funcionarios(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(120),
+email VARCHAR(120),
+senha VARCHAR(255),
+cargo VARCHAR(80),
+empresa_id INT
+);
+
+CREATE TABLE estoques(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(120),
+cidade VARCHAR(120),
+empresa_id INT
+);
+
+CREATE TABLE produtos(
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(200),
+codigo_barras VARCHAR(100),
+sku VARCHAR(100),
+quantidade INT,
+estoque_id INT
+);
+
+CREATE TABLE movimentacoes(
+id INT AUTO_INCREMENT PRIMARY KEY,
+produto_id INT,
+tipo VARCHAR(50),
+quantidade INT,
+data_mov TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE transportes(
+id INT AUTO_INCREMENT PRIMARY KEY,
+motorista VARCHAR(120),
+veiculo VARCHAR(120),
+origem VARCHAR(200),
+destino VARCHAR(200),
+status VARCHAR(50)
+);
