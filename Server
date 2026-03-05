@@ -1,0 +1,30 @@
+StockMasterERP
+│
+├── backend
+│   ├── server.js
+│   ├── database.js
+│   ├── routes
+│   │
+│   ├── produtos.js
+│   ├── estoque.js
+│   ├── transporte.js
+│   ├── logistica.js
+│   └── usuarios.js
+│
+├── frontend
+│
+├── login
+├── dashboard
+├── estoque
+├── logistica
+├── transporte
+├── funcionarios
+│
+├── admin
+│   ├── painel-admin
+│
+├── mobile-app
+│   └── stockmaster.apk
+│
+└── database
+    └── stockmaster.sql
